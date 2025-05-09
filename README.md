@@ -1,4 +1,5 @@
-# Mac Proc Info Tool → linux-syscall-toolkit
+# linux-syscall-toolkit  
+_A custom syscall + system info toolkit for Linux, with optional macOS analogs_
 
 This toolkit demonstrates **custom Linux syscalls** alongside **cross-platform macOS equivalents**. Designed as a hands-on systems programming portfolio piece, it bridges kernel development and user-space system inspection.
 
@@ -12,12 +13,12 @@ This project explores the **real-world mechanics of system introspection** acros
 - Platform-aware tooling for both Linux and macOS
 - Offers a consistent interface to system information for debugging and monitoring
 
-From retrieving child processes of a parent PID to inspecting the currently logged-in user's session, this toolkit proves that **OS-specific tools can still speak a common systems language.**
+From retrieving child processes of a parent PID to inspecting the currently logged-in user's session, this toolkit demonstrates that **OS-specific tools can still speak a common systems language** — and that user identity, session scope, and process state remain critical foundations of low-level systems insight.
 
 ---
 
 ## 🐧 Custom Linux Syscalls
-I implemented **four syscalls** in a custom-built Linux kernel:
+We implemented **four syscalls** in a custom-built Linux kernel:
 
 ### 1. `aaron_tuck` — syscall 450
 - A basic syscall that returns 0
@@ -83,7 +84,7 @@ gcc -o user_session_test user_session_test.c
 
 ---
 
-## 🍎 macOS Equivalents
+## 🍎 macOS Companion Tools (Optional)
 These user-space tools mimic Linux syscall behavior using macOS system APIs:
 
 ### `proc_info.c`
@@ -130,4 +131,3 @@ clang user_session.c -o user_session
 - Add logging kernel module
 - Track file descriptors or open files per PID
 - Group/supplement session info (e.g., groups, login type)
-
